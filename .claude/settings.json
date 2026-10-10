@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "themhl-misc": {
+      "source": { "source": "github", "repo": "theMHL/misc" }
+    }
+  },
+  "enabledPlugins": {
+    "model-router@themhl-misc": true
+  }
+}

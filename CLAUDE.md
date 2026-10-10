@@ -5,8 +5,8 @@
 Choose models by delegating with the Agent tool (you can't switch your own model). For each request, decide who does the work:
 
 - **Planning, design, debugging, root-cause analysis, code review, error checking:** do it yourself, or spawn an Agent with `model: "opus"`.
-- **Writing or editing code once the approach is clear:** spawn an Agent with `model: "haiku"` and a self-contained prompt (files, exact change, acceptance check). Use `model: "sonnet"` if the change is subtle or spans many files.
-- **Searches and lookups:** spawn an Explore Agent with `model: "haiku"`.
+- **Writing or editing code once the approach is clear:** write small, local changes yourself. Delegate only when the change spans several files or is large or mechanical (roughly 100+ lines): spawn an Agent with `model: "haiku"` and a self-contained prompt (files, exact change, acceptance check), or `model: "sonnet"` if the change is subtle.
+- **Searches and lookups:** always spawn an Explore Agent with `model: "haiku"` for anything broader than reading a known file.
 - **After a haiku agent writes code,** review its result yourself or with an opus Agent before reporting done.
 
-Don't write more than ~25 lines of code yourself; delegate with the model set explicitly. Trivial one-step edits may be done directly.
+Why: delegating costs a brief, a cold start that re-reads files, and a review. That beats writing it yourself only for big or read-heavy work. Your own main conversation stays on one model so its prompt cache is never reset.
