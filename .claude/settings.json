@@ -1,10 +1,14 @@
 {
   "extraKnownMarketplaces": {
     "themhl-misc": {
-      "source": { "source": "github", "repo": "theMHL/misc" }
+      "source": {
+        "source": "github",
+        "repo": "theMHL/misc"
+      }
     }
   },
   "enabledPlugins": {
-    "model-router@themhl-misc": true
+    "model-router@themhl-misc": true,
+    "impeccable@themhl-misc": true
   }
 }
