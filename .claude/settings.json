@@ -9,6 +9,7 @@
   },
   "enabledPlugins": {
     "model-router@themhl-misc": true,
-    "impeccable@themhl-misc": true
+    "impeccable@themhl-misc": true,
+    "workflow@themhl-misc": true
   }
 }
